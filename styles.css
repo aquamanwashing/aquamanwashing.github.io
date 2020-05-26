@@ -26,6 +26,26 @@ h1{
   color: var(--orange-color, #fe8b0a);
 }
 
+h2{
+  margin: 1rem 0 4rem 0;
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--orange-color, #fe8b0a);
+}
+
+h2.title{
+  margin: 4rem 0 1rem 0;
+  font-size: 2rem;
+  line-height: 4rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--orange-color, #fe8b0a);
+}
+
 .banner{
   position: relative;
   display: flex;
@@ -42,6 +62,18 @@ h1{
 
 .stripe{
   width: 360px;
+}
+
+.mobile-logo{
+  background: var(--white-color, #e8ecf7);
+  position: relative;
+}
+
+.logo{
+  max-width: 275px;
+  position: absolute;
+  left: 2rem;
+  bottom: 1rem;
 }
 
 .facebook-link{
@@ -63,13 +95,60 @@ h1{
   opacity: .7;
 }
 
+.email-link{
+  position: absolute;
+  right: 6rem;
+  bottom: 2rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 7px;
+  opacity: 1;
+  background: var(--blue-color, #212c48);
+  transition: opacity .3s ease;
+}
+
+.email-link:hover{
+  opacity: .7;
+}
+
 .content{
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
+.container{
+  max-width: 690px !important;
+}
+
+.mobile-nav{
+  display: none;
+  background: white;
+}
+
 @media screen and (max-width:625px){
   .stripe{
     display: none;
+  }
+
+  .container{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .banner{
+    min-height: 250px;
+  }
+
+  .mobile-nav{
+    display: block;
+    text-align: center;
+  }
+
+  .mobile-nav .mobile-logo{
+    max-width: 300px;
+    text-align: center;
   }
 }
